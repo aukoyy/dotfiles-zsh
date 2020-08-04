@@ -1,6 +1,7 @@
 # python
 alias python="python3"
-
+alias pip ="pip3"
+print "python=python3, pip=pip3"
 
 # Git aliases
 alias g="git"
@@ -18,9 +19,6 @@ if [ -f ~/.git-completion.bash ]; then
   __git_complete gco _git_checkout
 fi
 
-
-#!/usr/bin/env bash
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -31,8 +29,6 @@ alias -- -="cd -"
 
 # Shortcuts
 alias c="cd ~/code"
-alias m="cd /mnt/c/Users/Øyvind"
-
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
