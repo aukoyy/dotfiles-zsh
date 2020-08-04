@@ -2,11 +2,11 @@
 
 This is a collection of my preferences so as to allow quick setup and continuity between machines I use for development
 
-# Future stuff:? lage min egen bootstrap?
+#### Go to and follow the instructions on the following link
 
-# Usage
+[Beautiful Terminal Guide](https://medium.com/@shivam1/make-your-terminal-beautiful-and-fast-with-zsh-shell-and-powerlevel10k-6484461c6efb)
 
-cd into this folder
-run `source bootstrap.sh`
+This will take you through setup of:
 
-This will copy the needed text into the systems bash files and point to the files in this folder.
+- Oh my zsh
+- powerlevel10K
