@@ -8,7 +8,7 @@ alias g="git"
 alias gs='git status'
 alias gco="git checkout"
 alias gb='git branch'
-alias glg='git lg -10'
+alias glg='git lg -30'
 alias cpg='cat package.json | grep'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
