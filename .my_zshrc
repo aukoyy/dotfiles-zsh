@@ -122,6 +122,13 @@ else
     print "404: ~/dotfiles-zsh/.aliases not found."
 fi
 
+# Add a shortcut for adding, commiting and pushing to github
+function acp() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
 # Load NVM - version manager for Node
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -131,10 +138,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-function acp() {
-  git add .
-  git commit -m "$1"
-  git push
-}
-
-
+# Add mysql to path
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
