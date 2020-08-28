@@ -16,6 +16,8 @@ alias -- -="cd -"
 
 # Shortcuts
 alias c="cd ~/code"
+alias cs="python ~/code/projects/sandbox/python-practice/mini_challenges/covid/active.py && python ~/code/projects/sandbox/python-practice/mini_challenges/covid/active_cases.py"
+echo 'cs: covid status'
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"

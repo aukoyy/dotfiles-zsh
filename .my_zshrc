@@ -133,9 +133,12 @@ function acp() {
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# Load Pyenv - version manager for Python
+# Load Pyenv - version manager for Python. Then print some options
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  echo "Python versions:"
+  pyenv versions
+  echo "Change python version: pyenv global {version}"
 fi
 
 # Add mysql to path
