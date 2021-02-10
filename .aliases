@@ -16,8 +16,9 @@ alias -- -="cd -"
 
 # Shortcuts
 alias c="cd ~/code"
+alias p="cd ~/code/projects"
 alias pp="cd ~/code/projects/sandbox/python-practice"
-alias a="cd ~/code/apcoa/charging-service-ocpi"
+alias a="cd ~/code/projects/aukoyy"
 alias cs="python ~/code/projects/sandbox/python-practice/mini_challenges/covid/active_cases.py"
 echo 'cs: covid status'
 
@@ -44,9 +45,6 @@ alias sudo='sudo '
 
 # Get week number
 alias week='date +%V'
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
