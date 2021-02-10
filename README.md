@@ -11,6 +11,13 @@ This will take you through setup of:
 - Oh my zsh
 - powerlevel10K
 
+# Symlinks
+
+```
+ln -s ~/dotfiles-zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles-zsh/.gitconfig ~/.gitconfig
+```
+
 ## Key Combos
 
 - Ctrl + U – delete from the cursor to the start of the line.

@@ -129,10 +129,6 @@ function acp() {
   git push
 }
 
-# Load NVM - version manager for Node
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 # Load Pyenv - version manager for Python. Then print some options
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -140,6 +136,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
   pyenv versions
   echo "Change python version: pyenv global {version}"
 fi
+
+# Load NVM - version manager for Node
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+echo "Node version:"
+node --version
 
 # Add mysql to path
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"

@@ -1,0 +1,5 @@
+[user]
+	name = aukoyy
+	email = 22494963+aukoyy@users.noreply.github.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
