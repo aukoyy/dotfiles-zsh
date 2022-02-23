@@ -34,15 +34,18 @@ ln -s ~/dotfiles-zsh/.gitconfig ~/.gitconfig
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-# old: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-
 
 # Then pass in the Brewfile location...
 brew bundle --file ~/dotfiles-zsh/Brewfile
 
-# ...or move to the directory first.
-cd ~/dotfiles-zsh && brew bundle
+******** DONT RUN FOR INSTALL: ********
+# IF you want to remove homebrew, run the uninstall script, followed by the provided removebrew.sh script
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+
+sh removebrew.sh
+
+********
 ```
 
 ## TODO List

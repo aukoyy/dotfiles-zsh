@@ -6,10 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/auk/.oh-my-zsh"
+#export ZSH="/Users/oyvindaukner/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -17,6 +18,8 @@ export ZSH="/Users/auk/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="nerdfont-complete"
+
+# ZSH_THEME="robbyrussell"
 
 
 # Set list of themes to pick from when loading at random
@@ -112,8 +115,6 @@ source $ZSH/oh-my-zsh.sh
 
 # --------- END OF AUTO GENERATED OH MY ZSH STUFF ---------
 
-# Clear screen from the error prompt
-clear
 
 # Source aliases
 if [ -f ~/dotfiles-zsh/.aliases ]; then
@@ -122,22 +123,11 @@ else
     print "404: ~/dotfiles-zsh/.aliases not found."
 fi
 
-# Add a shortcut for adding, commiting and pushing to github
-function acp() {
-  git add .
-  git commit -m "$1"
-  git push
-}
 
-# Load Pyenv - version manager for Python. Then print some options
+# Load Pyenv - version manager for Python
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
-  #echo "Python versions:"
-  pyenv versions
-  echo "Change python version: pyenv global {version}"
 fi
-
-
 
 # Add mysql to path
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -145,7 +135,22 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH=$HOME/bin:$PATH
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
+# Set a function that can print the current version of some packages
+function versions() {
+  if command -v pyenv 1>/dev/null 2>&1; then
+    echo "Python versions:"
+    pyenv versions
+    echo "Change python version: pyenv global {version}"
+  fi
+  echo ""
+  echo "NVM version:"
+  nvm -v
+  echo "Node version:"
+  node -v
+  echo "NPM version:"
+  npm -v
+}

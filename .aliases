@@ -8,7 +8,20 @@ alias cpg='cat package.json | grep'
 alias p='git pull'
 alias pi='git pull && npm i'
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Add a shortcuts for adding, commiting and pushing to github.
+# TODO: not sure if theses are working
+function acp() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
+function gc() {
+  git add .
+  git commit -m "$1"
+}
+
+# Easier navigation: 
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -21,9 +34,6 @@ alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias c="cd ~/code"
 alias p="cd ~/code/projects"
 alias pp="cd ~/code/projects/sandbox/python-practice"
-alias a="cd ~/code/projects/aukoyy"
-# alias cs="python ~/code/projects/sandbox/python-practice/mini_challenges/covid/active_cases.py"
-
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
@@ -54,3 +64,6 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# shortcut for the versions function
+alias v='versions'
