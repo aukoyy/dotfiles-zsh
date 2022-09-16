@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -115,7 +117,6 @@ source $ZSH/oh-my-zsh.sh
 
 # --------- END OF AUTO GENERATED OH MY ZSH STUFF ---------
 
-
 # Source aliases
 if [ -f ~/dotfiles-zsh/.aliases ]; then
     source ~/dotfiles-zsh/.aliases
@@ -136,21 +137,35 @@ export PATH=$HOME/bin:$PATH
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Set a function that can print the current version of some packages
 function versions() {
   if command -v pyenv 1>/dev/null 2>&1; then
-    echo "Python versions:"
-    pyenv versions
-    echo "Change python version: pyenv global {version}"
+    echo "Using pyenv for Python versions"
+    echo "Python version:"
+    python -V
   fi
+
   echo ""
-  echo "NVM version:"
-  nvm -v
+  echo "Using volta for node versions"
   echo "Node version:"
   node -v
   echo "NPM version:"
   npm -v
 }
+
+# bun completions
+[ -s "/Users/auk/.bun/_bun" ] && source "/Users/auk/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Volta node version manager
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
