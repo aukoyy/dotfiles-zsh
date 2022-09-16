@@ -35,6 +35,8 @@ alias c="cd ~/code"
 alias p="cd ~/code/projects"
 alias pp="cd ~/code/projects/sandbox/python-practice"
 
+alias f="cd ~/code/fleks"
+
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
