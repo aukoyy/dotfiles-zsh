@@ -4,6 +4,9 @@ This is a collection of my preferences so as to allow quick setup and continuity
 
 ## Steps to bootstrap a new Mac
 
+psssst: you may be able to install oh-my-zsh with fig:
+[Check out Fig!](https://fig.io/)
+
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew. On newer macs this comes out of the box
 
 ```zsh
