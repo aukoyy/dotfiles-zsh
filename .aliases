@@ -8,25 +8,7 @@ alias cpg='cat package.json | grep'
 alias p='git pull'
 alias pi='git pull && npm i'
 
-# Add a shortcuts for adding, commiting and pushing to github.
-# TODO: not sure if theses are working
-function acp() {
-  git add .
-  git commit -m "$1"
-  git push
-}
-
-function gc() {
-  git add .
-  git commit -m "$1"
-}
-
 # Easier navigation: 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
