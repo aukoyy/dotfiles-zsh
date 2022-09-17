@@ -4,7 +4,7 @@ This is a collection of my preferences so as to allow quick setup and continuity
 
 ## Steps to bootstrap a new Mac
 
-1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
+1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew. On newer macs this comes out of the box
 
 ```zsh
 xcode-select --install
@@ -35,7 +35,7 @@ ln -s ~/dotfiles-zsh/.gitconfig ~/.gitconfig
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# Then pass in the Brewfile location...
+# Then pass in the Brewfile if you would like to install these programs.
 brew bundle --file ~/dotfiles-zsh/Brewfile
 
 ******** DONT RUN FOR INSTALL: ********
@@ -48,17 +48,23 @@ sh removebrew.sh
 ********
 ```
 
+5. Install oh-my-zsh
+   ```zsh
+   # Install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    # Install PowerLevel10K
+    git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+    # Configure PowerLevel10K
+    p10k configure
+   ```
+   [Beautiful Terminal Guide](https://medium.com/@shivam1/make-your-terminal-beautiful-and-fast-with-zsh-shell-and-powerlevel10k-6484461c6efb)
+
 ## TODO List
 
 - Learn how to use [`defaults`](https://macos-defaults.com/#%F0%9F%99%8B-what-s-a-defaults-command) to record and restore System Preferences and other macOS configurations.
 - Automate symlinking and run script files with a bootstrapping tool like [Dotbot](https://github.com/anishathalye/dotbot).
-- Revisit the list in [`.zshrc`](.zshrc) to customize the shell.
-- Create a [bootable USB installer for macOS](https://support.apple.com/en-us/HT201372).
-- Integrate other cloud services into your Dotfiles process (Dropbox, Google Drive, etc.).
 - Find inspiration and examples in other Doffiles repositories at [dotfiles.github.io](https://dotfiles.github.io/).
 
 ### Sources
-
-[Beautiful Terminal Guide](https://medium.com/@shivam1/make-your-terminal-beautiful-and-fast-with-zsh-shell-and-powerlevel10k-6484461c6efb)
 
 Source: [Beyond Dotfiles in 100 seconds](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds/blob/master/README.md)
