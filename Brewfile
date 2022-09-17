@@ -4,21 +4,21 @@ tap "homebrew/services"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # Extendable open-source CI server
-brew "jenkins-lts"
+# brew "jenkins-lts"
 # Open source relational database management system
-brew "mysql@5.7", restart_service: true
+# brew "mysql@5.7", restart_service: true
 # Library for command-line editing
-brew "readline"
+# brew "readline"
 # Python version management
 brew "pyenv"
 # Command-line interface for SQLite
-brew "sqlite"
+# brew "sqlite"
 # General-purpose data compression with high compression ratio
-brew "xz"
+# brew "xz"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.8", link: true
+# brew "python@3.8", link: true
 # Messaging broker
-brew "rabbitmq"
+# brew "rabbitmq"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Internet file retriever
