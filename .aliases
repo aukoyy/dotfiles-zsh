@@ -2,11 +2,16 @@
 alias g="git"
 alias gs='git status'
 alias gco="git checkout"
+alias gfo="git fetch origin"
+alias gpy="git pull && yarn"
 alias gb='git branch'
 alias glg='git lg -30'
 alias cpg='cat package.json | grep'
 alias p='git pull'
 alias pi='git pull && npm i'
+
+# Quick commands
+alias dcb='dotnet clean && dotnet build'
 
 # Easier navigation: 
 alias -- -="cd -"
@@ -17,7 +22,7 @@ alias c="cd ~/code"
 alias p="cd ~/code/projects"
 alias pp="cd ~/code/projects/sandbox/python-practice"
 
-alias f="cd ~/code/fleks"
+alias ct="cd ~/code/cargotron"
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
@@ -51,3 +56,16 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # shortcut for the versions function
 alias v='versions'
+
+# Get local network adress of this machine
+alias localhost="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
+# ipconfig getifaddr en0 would also work
+
+# helper text for backing up on AWS S3
+function backup() {
+  echo ""
+  echo "AWS backup instructions:"
+  echo "Download folder: aws s3 cp S3 <bucket URI> <local dir> --recursive"
+  echo "Backup folder: ??"
+  echo ""
+}
