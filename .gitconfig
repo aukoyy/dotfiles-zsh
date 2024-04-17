@@ -1,8 +1,7 @@
 [user]
   name = Øyvind Aukner
-	email = oyvind.auk@gmail.com
-  # email = 22494963+aukoyy@users.noreply.github.com
-  # email = oyvind.auk@gmail.com
+  email = 22494963+aukoyy@users.noreply.github.com
+  
 [core]
   editor = vim
 [alias]
