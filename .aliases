@@ -23,6 +23,7 @@ alias p="cd ~/code/projects"
 alias pp="cd ~/code/projects/sandbox/python-practice"
 
 alias ct="cd ~/code/cargotron"
+alias q="cd ~/code/qubit"
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
