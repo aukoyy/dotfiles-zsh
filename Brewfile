@@ -1,15 +1,10 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "ngrok/ngrok"
 
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-
-# Open source relational database management system
-# brew "mysql@5.7", restart_service: true
-
-# Library for command-line editing
-# brew "readline"
 
 # Python version management
 brew "pyenv"
@@ -23,9 +18,6 @@ brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
 # brew "python@3.8", link: true
 
-# Messaging broker
-# brew "rabbitmq"
-
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 
@@ -34,3 +26,12 @@ brew "wget"
 
 # General-purpose lossless data-compression library
 brew "zlib"
+
+
+brew "yarn"
+brew "htop"
+brew "awscli"
+brew "neovim"
+
+cask "ngrok"
+cask "obsidian"
